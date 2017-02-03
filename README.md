@@ -9,7 +9,7 @@ Add this two paths to environments `PATH`
 
 Change the path route according to your installation folder
 
-## How to connect to the default DB
+## How to connect to the default **User**
 
 ```cmd
 psql -U postgres
