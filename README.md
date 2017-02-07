@@ -1,4 +1,4 @@
-# Notes about PostgreSQL
+# Notes about PostgreSQL CLI (psql command-line tool)
 
 ## How to add `posql` command if windows doesn't recognize it
 
@@ -50,6 +50,14 @@ database=# \dt
 ```
 
 you first need to connect to the desire database and then type `\dt` command
+
+## How to describe a table
+
+```cmd
+\d+ tablename
+```
+
+**Note**: We need to run this command in the `psql` command-line tool
 
 ## How to run an external sql script file to your database
 
