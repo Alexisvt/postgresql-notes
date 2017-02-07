@@ -9,11 +9,13 @@ Add this two paths to environments `PATH`
 
 Change the path route according to your installation folder
 
-## How to connect to the default **User**
+## How to connect to postgres using already defined user
 
 ```cmd
-psql -U postgres
+psql -U username
 ```
+
+Where `username` is the one that you want to use to connect to Postgres
 
 than will ask the password that you define in the installation process
 
@@ -32,6 +34,14 @@ psql -U username databasename
 ```
 
 Then you need to type the password for `username`
+
+## How to list all the Databases in PostgreSQL
+
+```cmd
+> \l
+```
+
+**Note**: in order to run this command you need to be connect to postgres
 
 ## How to show the list of tables
 
