@@ -65,3 +65,27 @@ you first need to connect to the desire database and then type `\dt` command
 psql -U username targetDataBase < C:\path-to-your-sql-script\script-to-apply.sql
 ```
 
+## How to enable logs in Postgres (Windows SO)
+
+First we need to go to `data` folder in **Postgres** installed directory and edit `postgresql.conf` file, add this two lines:
+
+```txt
+log_statement = 'all'
+log_min_duration_statement = 0
+```
+
+**Reference**: [How to enable logging in Postgresql 9.2 and 9.1](http://sharadchhetri.com/2013/12/08/how-to-enable-logging-in-postgresql-9-2-and-9-1/)
+
+Then we need to restart the server using this command
+
+```cmd
+pg_ctl -D "C:\Program Files\PostgreSQL\9.6\data" restart
+```
+
+**Note**: Change the directory according to yours installed Postgres version.
+
+After doing those steps all the logs will be register into `pg_log` folder inside `data` of **Postgres** installation, sample dir:
+
+```txt
+C:\Program Files\PostgreSQL\9.6\data\pg_log
+```
